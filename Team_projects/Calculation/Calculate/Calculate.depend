@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1409335826 source:f:\programming\c++\git\teamwork_repo\avita\team_projects\calculation\calculate\main.cpp
+	"BaseConvert.h"
+	"TempertureConverter.h"
+	<iostream>
+	<cmath>
+	<string>
+
+1409336337 f:\programming\c++\git\teamwork_repo\avita\team_projects\calculation\calculate\baseconvert.h
+	<string>
+	<string.h>
+
+1409336901 f:\programming\c++\git\teamwork_repo\avita\team_projects\calculation\calculate\tempertureconverter.h
+
