@@ -1,3 +1,1 @@
-This directory, is for projects and codes that all members
-will work on them.
-
+*** This directory, is a directory for team projects, and all of members will work on them ***

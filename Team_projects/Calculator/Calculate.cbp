@@ -33,8 +33,6 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="BaseConvert.h" />
-		<Unit filename="DistanceCoverter.h" />
-		<Unit filename="TempertureConverter.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

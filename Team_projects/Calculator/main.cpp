@@ -3,8 +3,6 @@
 // Started at Thursday - 2014 28 August
 
 #include "BaseConvert.h"
-#include "TempertureConverter.h"
-#include "DistanceCoverter.h"
 #include <iostream>
 #include <cmath>
 #include <string>
