@@ -12,3 +12,24 @@
 
 1409336901 f:\programming\c++\git\teamwork_repo\avita\team_projects\calculation\calculate\tempertureconverter.h
 
+1409750114 source:d:\bestprogrammersgroup\avita\team_projects\calculator\calculator.cpp
+	"Calculator.h"
+	<sstream>
+	<stdio.h>
+	<stdexcept>
+
+1409596069 d:\bestprogrammersgroup\avita\team_projects\calculator\calculator.h
+	<string>
+
+1409750227 source:d:\bestprogrammersgroup\avita\team_projects\calculator\main.cpp
+	"Calculator.h"
+	"BaseConvert.h"
+	<iostream>
+	<cmath>
+	<string>
+	<stdexcept>
+
+1409422278 d:\bestprogrammersgroup\avita\team_projects\calculator\baseconvert.h
+	<string>
+	<string.h>
+

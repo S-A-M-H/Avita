@@ -8,6 +8,7 @@
 #include <iostream>
 #include <cmath>
 #include <string>
+#include <stdexcept>
 
 
 int main()
