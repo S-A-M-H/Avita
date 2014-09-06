@@ -1,5 +1,7 @@
 #include "Calculator.h"
 #include <sstream>
+#include <stdio.h>
+#include <stdexcept>
 
 Calculator::Calculator(string expression)
 {
@@ -24,7 +26,7 @@ string Calculator::Calculate()
 
 	//convert numberBase10 to base2
 
-	throw exception("Not implemented.");
+	throw exception();
 }
 
 bool Calculator::isValidBaes(int base)
