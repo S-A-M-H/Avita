@@ -1,0 +1,6 @@
+AC
+TC
+CT
+CT
+TG
+GC
