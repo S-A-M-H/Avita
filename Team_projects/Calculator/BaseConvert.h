@@ -18,13 +18,13 @@ private:
 public:
     BaseConvert(); // default constructor;
     BaseConvert(std::string _num, int _base1, int _base2); // constructor with values for "num", "base1". "base2"
-    std::string return_num(); // return num;
-    int return_base1(); // return base1
-    int return_base2(); // return base2
-    bool change_num(std::string _num); // num = _num;
-    bool change_base1(int _base1); // base1 = _base1
-    bool change_base2(int _base2); // base2 = _base2
-    bool change(std::string _num, int base1, int base2); // change all members value, using functions "change_num", "change_base1", "change_base2"
+    std::string getNum(); // return num;
+    int getBase1(); // return base1
+    int getBase2(); // return base2
+    bool setNum(std::string _num); // num = _num;
+    bool setBase1(int _base1); // base1 = _base1
+    bool setBase2(int _base2); // base2 = _base2
+    bool _set(std::string _num, int base1, int base2); // change all members value, using functions "change_num", "change_base1", "change_base2"
     std::string convert(std::string _num, int _base1, int base2); // TODO
 };
 
@@ -40,33 +40,33 @@ BaseConvert::BaseConvert(std::string _num, int _base1, int _base2)
     base1 = _base1;
     base2 = _base2;
 }
-std::string BaseConvert::return_num()
+std::string BaseConvert::getNum()
 {
     if(num == "-1")
         return "Number is not valid";
     else
         return num;
 }
-int BaseConvert::return_base1()
+int BaseConvert::getBase1()
 {
     if(base1 == NULL || base1 == -1)
         return NULL;
     else
         return base1;
 }
-int BaseConvert::return_base2()
+int BaseConvert::getBase2()
 {
     if(base2 == NULL || base2 == -1)
         return NULL;
     else
         return base2;
 }
-bool BaseConvert::change_num(std::string _num)
+bool BaseConvert::setNum(std::string _num)
 {
     num = _num;
     return true;
 }
-bool BaseConvert::change_base1(int _base1)
+bool BaseConvert::setBase1(int _base1)
 {
     if(_base1 && _base1 > 1)
     {
@@ -76,7 +76,7 @@ bool BaseConvert::change_base1(int _base1)
     else
         return false;
 }
-bool BaseConvert::change_base2(int _base2)
+bool BaseConvert::setBase2(int _base2)
 {
     if(_base2 && _base2 > 1)
     {
@@ -86,11 +86,11 @@ bool BaseConvert::change_base2(int _base2)
     else
         return false;
 }
-bool BaseConvert::change(std::string _num, int base1, int base2)
+bool BaseConvert::_set(std::string _num, int base1, int base2)
 {
-    change_num(_num);
-    change_base1(base1);
-    change_base2(base2);
+    setNum(_num);
+    setBase1(base1);
+    setBase2(base2);
     return true;
 }
 

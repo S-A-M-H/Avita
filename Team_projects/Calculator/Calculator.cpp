@@ -22,9 +22,7 @@ Calculator::Calculator(string expression)
 
 string Calculator::Calculate()
 {
-	//convert number to base10 to numberBase10
 
-	//convert numberBase10 to base2
 
 	throw exception();
 }

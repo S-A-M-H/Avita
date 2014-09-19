@@ -33,3 +33,18 @@
 	<string>
 	<string.h>
 
+1409836698 source:f:\programming\c++\git\teamwork_repo\avita\team_projects\calculator\main.cpp
+	"Calculator.h"
+	"BaseConvert.h"
+	<iostream>
+	<cmath>
+	<string>
+	<stdexcept>
+
+1410028871 f:\programming\c++\git\teamwork_repo\avita\team_projects\calculator\calculator.h
+	<string>
+
+1409336337 f:\programming\c++\git\teamwork_repo\avita\team_projects\calculator\baseconvert.h
+	<string>
+	<string.h>
+
