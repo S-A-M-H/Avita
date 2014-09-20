@@ -26,6 +26,8 @@ int main()
 	try
 	{
 		Calculator calc(expression);
+
+		cout << calc.Calculate() << endl;
 	}
 	catch(const invalid_argument &invalid_arg_exp)
 	{
@@ -38,5 +40,6 @@ int main()
 
     std::cin.ignore();
     std::cin.get();
+
 	return 0;
 }

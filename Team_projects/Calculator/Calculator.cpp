@@ -2,6 +2,9 @@
 #include <sstream>
 #include <stdio.h>
 #include <stdexcept>
+#include <iostream>
+#include <vector>
+#include <algorithm>
 
 Calculator::Calculator(string expression)
 {
@@ -25,7 +28,9 @@ Calculator::Calculator(string expression)
 
 string Calculator::Calculate()
 {
-	throw exception();
+	int numberInBase10 = convertToBase10(base1, number);
+
+	return convertFromBase10(base2, numberInBase10);
 }
 
 bool Calculator::isValidBaes(int base)
@@ -48,81 +53,83 @@ bool Calculator::isValidNumber(int base, string num)
 
 int Calculator::getDecimalNumber(char digit)
 {
-	switch (digit)
+	if(digit >= '0' && digit <= '9')
+		return digit - '0';
+
+	if (digit >= 'A' && digit <= 'Z')
+		return (digit - 'A') + 10;
+
+	//out of range value
+	throw invalid_argument("Supplied number does not exists in any base numbers.");
+}
+
+char Calculator::getDigit(int number)
+{
+	if(number >= 0 && number <= 9)
+		return '0' + number;
+
+	if (number >= 10 && number <= 36)
 	{
-	case '0':
-		return 0;
-	case '1':
-		return 1;
-	case '2':
-		return 2;
-	case '3':
-		return 3;
-	case '4':
-		return 4;
-	case '5':
-		return 5;
-	case '6':
-		return 6;
-	case '7':
-		return 7;
-	case '8':
-		return 8;
-	case '9':
-		return 9;
-	case 'A':
-		return 10;
-	case 'B':
-		return 11;
-	case 'C':
-		return 12;
-	case 'D':
-		return 13;
-	case 'E':
-		return 14;
-	case 'F':
-		return 15;
-	case 'G':
-		return 16;
-	case 'H':
-		return 17;
-	case 'I':
-		return 18;
-	case 'J':
-		return 19;
-	case 'K':
-		return 20;
-	case 'L':
-		return 21;
-	case 'M':
-		return 22;
-	case 'N':
-		return 23;
-	case 'O':
-		return 24;
-	case 'P':
-		return 25;
-	case 'Q':
-		return 26;
-	case 'R':
-		return 27;
-	case 'S':
-		return 28;
-	case 'T':
-		return 29;
-	case 'U':
-		return 30;
-	case 'V':
-		return 31;
-	case 'W':
-		return 32;
-	case 'X':
-		return 33;
-	case 'Y':
-		return 34;
-	case 'Z':
-		return 35;
-	default:
-		throw invalid_argument("Supplied number does not exists in any base numbers.");
+		//relative position in alphabet
+		int charPosition = number - 10;
+
+		return 'A' + charPosition;
 	}
+
+	//out of range value
+	throw out_of_range("This number could not be represented in any equal character.");
+}
+
+int Calculator::convertToBase10(int base, string number)
+{
+	//formula: (ABC)X = (A * X^2) + (B * X^1) + (C * X^0)
+
+	int sum = 0;
+	int numberIndex = 0;
+
+	int basePower = number.length() - 1;
+
+	for (int i = basePower; i >= 0; i--)
+	{
+		char digit = number[numberIndex];
+
+		sum += getDecimalNumber(digit) * pow(base, i);
+
+		numberIndex++;
+	}
+
+	return sum;
+}
+
+string Calculator::convertFromBase10(int base, int number)
+{
+	//divide until quotient is zero
+	//final result is final quotient and remainders from last step to first one
+
+	vector<int> result;
+	string digits;
+
+	int remainder = number % base;
+	int quotient = number / base;
+
+	result.push_back(remainder);
+
+	while(quotient != 0)
+	{
+		remainder = quotient % base;
+		quotient = quotient / base;
+
+		result.push_back(remainder);
+	}
+
+	reverse(result.begin(), result.end());
+
+	for (int x : result)
+	{
+		char digit = getDigit(x);
+
+		digits.push_back(digit);
+	}
+
+	return digits;
 }
