@@ -11,7 +11,8 @@ Please create a folder named as your name then add your files there.
 
 ====
 ###Avita group members:###
+
 - Ahmad
 - Sunmi
 - Hossein
-- Amir Mohammad
+- *Amir Mohammad*(master)
