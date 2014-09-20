@@ -10,19 +10,8 @@
 #include <string>
 #include <stdexcept>
 
-
-int main()
+void calculateExpression(std::string expression)
 {
-	std::string expression;
-
-	//101010:2>10 +
-
-	//1010:1>39 !
-	//1010:1:39 !
-	//1010@:1<39 !
-
-	std:: cin >> expression;
-
 	try
 	{
 		Calculator calc(expression);
@@ -31,15 +20,37 @@ int main()
 	}
 	catch(const invalid_argument &invalid_arg_exp)
 	{
-		std::cerr << invalid_arg_exp.what() << endl;
+		cerr << invalid_arg_exp.what() << endl;
 	}
 	catch(const out_of_range &out_of_range_exp)
 	{
-		std::cerr << out_of_range_exp.what() << endl;
+		cerr << out_of_range_exp.what() << endl;
 	}
+}
 
-    std::cin.ignore();
-    std::cin.get();
+int main()
+{
+	string expression;
+
+	cout
+		<< "Enter your base calculation request in the following format: number:base1>base2" << endl
+		<< "Enter q when you were done." << endl
+		<< endl;
+
+	cin >> expression;
+
+	while (expression != "q")
+	{
+		calculateExpression(expression);
+
+		cin >> expression;
+	} 
+
+	cin.ignore();
+
+	cout << "Press any key to exit..." << endl;
+
+	cin.get();
 
 	return 0;
 }
