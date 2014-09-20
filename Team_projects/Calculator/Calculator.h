@@ -23,5 +23,7 @@ private:
     string number;
 
 	bool isValidBaes(int base);
+	bool isValidNumber(int base, string num);
+	int getDecimalNumber(char digit);
 };
 
