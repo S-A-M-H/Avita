@@ -1,4 +1,4 @@
-// This is and Open Source and Free Project (GPLv3).
+// This is an Open Source and Free Project (GPLv3).
 // Written by Avita group.
 // Started at Thursday - 2014 28 August
 
