@@ -93,7 +93,7 @@ int Calculator::convertToBase10(int base, string number)
 	{
 		char digit = number[numberIndex];
 
-		sum += getDecimalNumber(digit) * pow(base, i);
+		sum += getDecimalNumber(digit) * ceil(pow(base, i));
 
 		numberIndex++;
 	}

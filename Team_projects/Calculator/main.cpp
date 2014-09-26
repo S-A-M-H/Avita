@@ -4,7 +4,6 @@
 
 #include "Calculator.h"
 
-#include "BaseConvert.h"
 #include <iostream>
 #include <cmath>
 #include <string>
@@ -44,7 +43,7 @@ int main()
 		calculateExpression(expression);
 
 		cin >> expression;
-	} 
+	}
 
 	cin.ignore();
 

@@ -48,3 +48,22 @@
 	<string>
 	<string.h>
 
+1411716629 source:d:\documents\visual studio 2012\projects\avita\team_projects\calculator\calculator.cpp
+	"Calculator.h"
+	<sstream>
+	<stdio.h>
+	<stdexcept>
+	<iostream>
+	<vector>
+	<algorithm>
+
+1411715493 d:\documents\visual studio 2012\projects\avita\team_projects\calculator\calculator.h
+	<string>
+
+1411714119 source:d:\documents\visual studio 2012\projects\avita\team_projects\calculator\main.cpp
+	"Calculator.h"
+	<iostream>
+	<cmath>
+	<string>
+	<stdexcept>
+

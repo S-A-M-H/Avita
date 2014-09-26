@@ -32,7 +32,6 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="BaseConvert.h" />
 		<Unit filename="Calculator.cpp" />
 		<Unit filename="Calculator.h" />
 		<Unit filename="main.cpp" />
