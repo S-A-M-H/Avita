@@ -14,5 +14,4 @@ Please create a folder named as your name then add your files there.
 
 - Ahmad
 - Sunmi
-- Hossein
 - *Amir Mohammad(Leader)*
